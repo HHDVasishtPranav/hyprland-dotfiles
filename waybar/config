@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 42,
+    "spacing": 5,
+
+    "modules-left": [
+        "custom/ubuntu",
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "cpu",
+        "memory",
+        "temperature",
+        "network",
+        "bluetooth",
+        "pulseaudio",
+        "custom/microphone",
+        "backlight",
+        "mpris",
+        "battery",
+        "custom/power"
+    ],
+
+    "custom/ubuntu": {
+        "format": "",
+        "tooltip": "Cyber Hub",
+        "on-click": "~/.config/hypr/scripts/keybinds.sh"
+    },
+
+    "hyprland/workspaces": {
+        "format": "󰍹 {id}",
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "hyprland/window": {
+        "format": "󰣆 {}",
+        "max-length": 35
+    },
+
+    "clock": {
+        "format": "󰥔 {:%H:%M}",
+        "tooltip": true
+    },
+
+    "cpu": {
+        "format": "󰍛 {usage}%"
+    },
+
+    "memory": {
+        "format": "󰘚 {percentage}%"
+    },
+
+    "temperature": {
+        "thermal-zone": 1,
+        "format": "󰔏 {temperatureC}°C"
+    },
+
+    "network": {
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": "󰈀 LAN",
+        "format-disconnected": "󰖪 OFF",
+        "tooltip-format": "{ifname} | {ipaddr}",
+        "on-click": "~/.config/hypr/scripts/wifi.sh"
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "format-connected": "󰂱 {num_connections}",
+        "format-disabled": "󰂲",
+        "on-click": "~/.config/hypr/scripts/bluetooth.sh"
+    },
+
+    "pulseaudio": {
+        "format": "󰕾 {volume}%",
+        "format-muted": "󰝟 MUTED",
+        "on-click": "pavucontrol"
+    },
+
+    "custom/microphone": {
+        "exec": "wpctl get-volume @DEFAULT_AUDIO_SOURCE@",
+        "interval": 2,
+        "format": "󰍬 MIC",
+        "on-click": "~/.config/hypr/scripts/mic-toggle.sh"
+    },
+
+    "backlight": {
+        "format": "󰃠 {percent}%"
+    },
+
+    "mpris": {
+        "format": "󰎆 {dynamic}",
+        "max-length": 25
+    },
+
+    "battery": {
+        "format": "󰁹 {capacity}%",
+        "format-charging": "󰂄 {capacity}%"
+    },
+
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": "Power menu",
+        "on-click": "~/.config/hypr/scripts/keybinds.sh"
+    }
+}

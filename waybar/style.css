@@ -1,0 +1,143 @@
+@import url("file:///home/vasisht/.config/matugen/waybar-colors.css");
+* {
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+window#waybar {
+    background: rgba(5, 8, 15, 0.82);
+    color: @fg;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+}
+
+tooltip {
+    background: rgba(5, 8, 15, 0.97);
+    color: @fg;
+    border: 1px solid rgba(0, 240, 255, 0.45);
+    border-radius: 10px;
+}
+
+#custom-ubuntu {
+    color: @accent;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0 16px;
+    margin-right: 4px;
+}
+
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    color: @muted;
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+    padding: 0 9px;
+    margin: 4px 2px;
+}
+
+#workspaces button.active {
+    color: @accent;
+    background: rgba(0, 240, 255, 0.13);
+    box-shadow: inset 0 -2px rgba(0, 240, 255, 0.9);
+}
+
+#workspaces button:hover {
+    color: @accent2;
+    background: rgba(157, 78, 221, 0.13);
+}
+
+#window {
+    color: @muted;
+    padding: 0 14px;
+}
+
+#clock {
+    color: @accent;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 0 24px;
+}
+
+#cpu,
+#memory,
+#temperature,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-microphone,
+#backlight,
+#mpris,
+#battery {
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.055);
+    border-radius: 9px;
+    padding: 0 10px;
+    margin: 4px 2px;
+}
+
+#cpu {
+    color: @accent;
+}
+
+#memory {
+    color: @accent2;
+}
+
+#temperature {
+    color: @accent2;
+}
+
+#network {
+    color: @accent;
+}
+
+#bluetooth {
+    color: @accent2;
+}
+
+#pulseaudio {
+    color: @accent;
+}
+
+#custom-microphone {
+    color: @accent2;
+}
+
+#backlight {
+    color: @fg;
+}
+
+#mpris {
+    color: @muted;
+}
+
+#battery {
+    color: @fg;
+}
+
+#battery.charging {
+    color: @accent;
+}
+
+#battery.warning {
+    color: @accent2;
+}
+
+#battery.critical {
+    color: @error;
+}
+
+#custom-power {
+    color: @accent2;
+    font-size: 15px;
+    padding: 0 16px;
+    margin-left: 4px;
+}
+
+#custom-power:hover {
+    color: @accent;
+}
