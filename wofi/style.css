@@ -1,0 +1,33 @@
+@import url("file:///home/vasisht/.config/wofi/colors.css");
+
+window {
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 13px;
+    background-color: @bg;
+    border: 2px solid @accent;
+    border-radius: 14px;
+}
+
+#input {
+    margin: 14px;
+    padding: 10px 14px;
+    color: @fg;
+    background: alpha(@accent, 0.08);
+    border: 1px solid @accent2;
+    border-radius: 9px;
+}
+
+#entry {
+    padding: 9px 12px;
+    color: @fg;
+}
+
+#entry:selected {
+    background: alpha(@accent, 0.16);
+    color: @accent;
+    border-radius: 8px;
+}
+
+#img {
+    margin-right: 10px;
+}

@@ -6,15 +6,15 @@
 }
 
 window#waybar {
-    background: rgba(5, 8, 15, 0.82);
+    background: alpha(@bg, 0.88);
     color: @fg;
-    border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+    border-bottom: 1px solid alpha(@accent, 0.35);
 }
 
 tooltip {
-    background: rgba(5, 8, 15, 0.97);
+    background: alpha(@bg, 0.98);
     color: @fg;
-    border: 1px solid rgba(0, 240, 255, 0.45);
+    border: 1px solid alpha(@accent, 0.50);
     border-radius: 10px;
 }
 
@@ -41,13 +41,13 @@ tooltip {
 
 #workspaces button.active {
     color: @accent;
-    background: rgba(0, 240, 255, 0.13);
-    box-shadow: inset 0 -2px rgba(0, 240, 255, 0.9);
+    background: alpha(@accent, 0.15);
+    box-shadow: inset 0 -2px @accent;
 }
 
 #workspaces button:hover {
     color: @accent2;
-    background: rgba(157, 78, 221, 0.13);
+    background: alpha(@accent2, 0.15);
 }
 
 #window {
@@ -103,6 +103,11 @@ tooltip {
     color: @accent;
 }
 
+#pulseaudio.muted,
+#network.disconnected {
+    color: @error;
+}
+
 #custom-microphone {
     color: @accent2;
 }
@@ -129,6 +134,25 @@ tooltip {
 
 #battery.critical {
     color: @error;
+    animation: blink 0.9s steps(2, start) infinite;
+}
+
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#custom-microphone:hover,
+#backlight:hover,
+#mpris:hover,
+#battery:hover {
+    background: alpha(@accent, 0.10);
+    border-color: alpha(@accent, 0.30);
+}
+
+@keyframes blink {
+    to { opacity: 0.45; }
 }
 
 #custom-power {

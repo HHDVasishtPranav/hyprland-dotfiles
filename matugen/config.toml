@@ -5,3 +5,15 @@ reload_apps = true
 input_path = '~/.config/matugen/templates/waybar-colors.css'
 output_path = '~/.config/matugen/waybar-colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-dynamic.conf'
+output_path = '~/.config/kitty/dynamic-theme.conf'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/templates/hyprlock-colors.conf'
+output_path = '~/.config/hypr/hyprlock-colors.conf'
+
+[templates.wofi]
+input_path = '~/.config/matugen/templates/wofi-colors.css'
+output_path = '~/.config/wofi/colors.css'

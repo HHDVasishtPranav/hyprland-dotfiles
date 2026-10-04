@@ -1,0 +1,9 @@
+# Presentation-only defaults; Hyprland still launches `wofi --show drun`.
+width=48%
+height=46%
+location=center
+prompt=Search
+matching=fuzzy
+insensitive=true
+allow_markup=true
+hide_scroll=true

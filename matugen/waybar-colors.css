@@ -1,0 +1,8 @@
+/* Starter palette. Matugen will replace this file after its first run. */
+@define-color bg #080b12;
+@define-color fg #f2f7ff;
+@define-color accent #00f0ff;
+@define-color accent2 #9d4edd;
+@define-color muted #8b9bb4;
+@define-color surface #191d24;
+@define-color error #bf616a;

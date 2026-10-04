@@ -86,9 +86,9 @@
     },
 
     "custom/microphone": {
-        "exec": "wpctl get-volume @DEFAULT_AUDIO_SOURCE@",
+        "exec": "wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q '\\[MUTED\\]' && echo '󰍭 MUTED' || echo '󰍬 MIC'",
         "interval": 2,
-        "format": "󰍬 MIC",
+        "format": "{}",
         "on-click": "~/.config/hypr/scripts/mic-toggle.sh"
     },
 
@@ -103,7 +103,8 @@
 
     "battery": {
         "format": "󰁹 {capacity}%",
-        "format-charging": "󰂄 {capacity}%"
+        "format-charging": "󰂄 {capacity}%",
+        "tooltip-format": "Battery: {capacity}%\\nTime remaining: {time}"
     },
 
     "custom/power": {
